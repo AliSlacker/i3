@@ -14,10 +14,10 @@ sudo apt install -y g++ gcc libc6-dev make
 sudo apt install -y intel-microcode 
 
 # Network Manager
-sudo apt install -y network-manager-gnome
+sudo apt install -y network-manager network-manager-gnome
 
 # Installation for Appearance management
-#sudo apt install -y lxappearance 
+sudo apt install -y lxappearance 
 
 # File Manager (eg. pcmanfm,krusader)
 sudo apt install -y pcmanfm
@@ -42,11 +42,11 @@ sudo apt install -y pulseaudio alsa-utils pavucontrol volumeicon-alsa
 #sudo apt install -y exa
 
 # Printing and bluetooth (if needed)
-#sudo apt install -y cups
-#sudo apt install -y bluez blueman
+# sudo apt install -y cups
+# sudo apt install -y bluez blueman
 
-#sudo systemctl enable bluetooth
-#sudo systemctl enable cups
+# sudo systemctl enable bluetooth
+# sudo systemctl enable cups
 
 # Browser Installation (eg. chromium)
 sudo apt install -y firefox-esr 
@@ -55,17 +55,17 @@ sudo apt install -y firefox-esr
 # feh --bg-fill /path/to/directory 
 # example if you want to use in autostart located in ~/.local/share/dwm/autostart.sh
 # sudo apt install -y feh
-#sudo apt install -y nitrogen 
+# sudo apt install -y nitrogen 
 
 # Packages needed dwm after installation
-sudo apt install -y picom rofi dunst libnotify-bin unzip policykit-1-gnome scrot
+sudo apt install -y rofi dunst libnotify-bin unzip policykit-1-gnome maim
 
 # Command line text editor -- nano preinstalled  -- I like micro but vim is great
-#sudo apt install -y micro
+# sudo apt install -y micro
 sudo apt install -y neovim
 
 # Install fonts
-#sudo apt install fonts-font-awesome fonts-ubuntu fonts-liberation2 fonts-liberation fonts-terminus 
+# sudo apt install fonts-font-awesome fonts-ubuntu fonts-liberation2 fonts-liberation fonts-terminus 
 
 # Create folders in user directory (eg. Documents,Downloads,etc.)
 xdg-user-dirs-update
@@ -92,32 +92,7 @@ sudo systemctl enable ly.service
      sudo mkdir /usr/share/xsessions
 # fi
 
-# cat > ./temp << "EOF"
-# [Desktop Entry]
-# Encoding=UTF-8
-# Name=dwm
-# Comment=Dynamic window manager
-# Exec=dwm
-# Icon=dwm
-# Type=XSession
-# EOF
-# sudo cp ./temp /usr/share/xsessions/dwm.desktop;rm ./temp
-
-
-# # Creating directories
-# mkdir ~/.config/suckless
-
-# sudo apt install -y libx11-dev
-
-# # Move install directory, make, and install
-# cd ~/.config/suckless
-# tools=( "dwm" "dmenu" "st" "slstatus" "slock" "tabbed" )
-# for tool in ${tools[@]}
-# do 
-# 	git clone git://git.suckless.org/$tool
-# 	cd ~/.config/suckless/$tool;make;sudo make clean install;cd ..
-# done
-
+sudo apt install i3-wm
 
 
 # Install Nerd Fonts
