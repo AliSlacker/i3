@@ -6,6 +6,9 @@
 # xorg display server installation
 sudo apt install -y xorg xbindkeys xorg-dev
 
+# install timeshift 
+sudo apt install -y timeshift
+
 # INCLUDES make,etc.
 sudo apt install -y g++ gcc libc6-dev make
 
@@ -49,7 +52,7 @@ sudo apt install -y pulseaudio alsa-utils pavucontrol volumeicon-alsa
 # sudo systemctl enable cups
 
 # Browser Installation (eg. chromium)
-sudo apt install -y firefox-esr 
+# sudo apt install -y firefox-esr 
 
 # Desktop background browser/handler 
 # feh --bg-fill /path/to/directory 
@@ -58,7 +61,7 @@ sudo apt install -y firefox-esr
 # sudo apt install -y nitrogen 
 
 # Packages needed dwm after installation
-sudo apt install -y rofi dunst libnotify-bin unzip policykit-1-gnome maim
+sudo apt install -y rofi libnotify-bin unzip policykit-1-gnome maim
 
 # Command line text editor -- nano preinstalled  -- I like micro but vim is great
 # sudo apt install -y micro
@@ -87,12 +90,12 @@ sudo make install installsystemd
 sudo systemctl enable ly.service
 
 
-# XSessions and dwm.desktop
+# XSessions
  if [[ ! -d /usr/share/xsessions ]]; then
      sudo mkdir /usr/share/xsessions
-# fi
+ fi
 
-sudo apt install i3-wm
+sudo apt install -y i3-wm
 
 
 # Install Nerd Fonts
